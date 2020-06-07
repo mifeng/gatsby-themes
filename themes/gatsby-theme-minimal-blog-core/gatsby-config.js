@@ -33,6 +33,17 @@ module.exports = (themeOptions) => {
                 linkImagesToOriginal: false,
               },
             },
+            {
+              resolve: `gatsby-remark-embedder`,
+              options: {
+                customTransformers: [
+                  // Your custom transformers
+                ],
+                services: {
+                  // The service-specific options by the name of the service
+                },
+              },
+            },
           ],
           plugins: [
             {
@@ -49,6 +60,7 @@ module.exports = (themeOptions) => {
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-typescript`,
+      `gatsby-plugin-twitter`,
     ].filter(Boolean),
   }
 }
